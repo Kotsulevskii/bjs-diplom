@@ -4,7 +4,7 @@ let userForm = new UserForm();
 
 userForm.loginFormCallback = (data) => {
     ApiConnector.login(data, (response) => {
-        if (response.success === true) {
+        if (response.success) {
             location.reload();
         } else {
             userForm.setLoginErrorMessage(`Ошибка авторизации : ${response.error}`);
@@ -14,7 +14,7 @@ userForm.loginFormCallback = (data) => {
 
 userForm.registerFormCallback = (data) => {
     ApiConnector.register(data, (response) => {
-        if (response.success === true) {
+        if (response.success) {
             location.reload();
         } else {
             userForm.setRegisterErrorMessage(`Ошибка регистрации : ${response.error}`);
