@@ -34,7 +34,7 @@ function getCurrency() {
     });
 };
 getCurrency();
-setInterval(getCurrency(), 60000);
+setInterval(getCurrency, 60000);
 // операции с деньгами
 let moneyManager = new MoneyManager();
 
